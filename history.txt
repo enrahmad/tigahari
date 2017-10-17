@@ -1,0 +1,160 @@
+    1  sudo su
+    2  ping google.com
+    3  ip a
+    4  sudo nano /etc/network/interfaces
+    5  sudo /etc/init.d/networking restart
+    6  ip a
+    7  sudo /etc/init.d/networking stop
+    8  sudo /etc/init.d/networking start
+    9  ip a
+   10  sudo reboot
+   11  ip a
+   12  ping google.com
+   13  sudo nano /etc/network/interfaces
+   14  ip a
+   15  sudo nano /etc/apt/sources.list
+   16  sudo apt-get update
+   17  sudo apt-get install apt-transport-https                        ca-certificates
+   18  curl -fsSL https://yum.dockerproject.org/gpg | sudo apt-key add -
+   19  sudo add-apt-repository        "deb https://apt.dockerproject.org/repo/ \
+   20         ubuntu-$(lsb_release -cs) \
+   21         main"
+   22  sudo apt-get update
+   23  sudo apt-get -y install docker-engine
+   24  usermod -aG docker idn
+   25  sudo usermod -aG docker idn
+   26  sudo docker info
+   27  docker pull ubuntu
+   28  sudo usermod -aG docker idn
+   29  docker pull ubuntu
+   30  sudo usermod -aG docker idn
+   31  sudo reboot
+   32  docker pull ubuntu
+   33  docker images
+   34  docker run --help
+   35  docker run -it ubuntu
+   36  docker ps
+   37  docker ps -a
+   38  docker ps
+   39  docker run -it ubuntu
+   40  docker ps
+   41  docker attach 72f093439430
+   42  docker ps -a
+   43  docker stop 72f093439430
+   44  docker ps -a
+   45  history
+   46  docker ps -a
+   47  docker run --name idn_ubuntu -t -i ubuntu
+   48  docker ps -a
+   49  docker attach id_ubuntu
+   50  docker attach idn_ubuntu
+   51  ps -a
+   52  docker ps -a
+   53  docker run -it idn_ubuntu
+   54  docker run -it ubuntu
+   55  docker run -i -t idn_ubuntu
+   56  docker run -it ubuntu
+   57  docker ps -a
+   58  docker rm 98f2bb338582
+   59  docker ps -a
+   60  docker rm 72f093439430
+   61  docker rm 14f5b07b8228 
+   62  docker rm e308eb48092e
+   63  docker ps -a
+   64  sudo mkdir /root/shaare
+   65  sudo mkdir /root/share
+   66  sudo echo "Tes File Sharing" > root/share/tes.txt
+   67  sudo su
+   68  docker run -ti -d --restart=always --name shipyard-rethinkdb rethinkdb
+   69  sudo su
+   70  cat /etc/apt/sources.list
+   71  sudo shutdown -h 0
+   72  history
+
+   
+   
+   
+   
+   
+   
+   ROOT
+   
+       1  nano /etc/network/interfaces
+    2  ifdown eth0
+    3  ifup eth0
+    4  reboot
+    5  cd
+    6  ifconfig
+    7  ping google.com
+    8  cd
+    9  apt-get update -y
+   10  sudo rm -rf /var/lib/apt/lists && sudo mkdir /var/lib/apt/lists
+   11  apt-get clean
+   12  apt-get update -y
+   13  apt-get install deb.torproject.org-keyring
+   14  apt-key list | grep expired
+   15  apt-get clean
+   16  ls
+   17  mv lists lists.old
+   18  ls
+   19  mkdir -p lists/partial
+   20  apt-get update
+   21  cd /etc/apt/sources.list
+   22  cd /etc/apt/
+   23  cp sources.list sources.list.bak
+   24  nano sources.list
+   25  apt-get update
+   26  fdisk -l
+   27  sudo apt-get install -y ntp
+   28  sudo service ntp reload && sudo service ntp restart
+   29  sudo dpkg-reconfigure --frontend noninteractive tzdata
+   30  sudo apt-get install -y python-pip git bridge-utils debootstrap ifenslave ifenslave-2.6 lsof lvm2 ntp ntpdate openssh-server sudo tcpdump vlan
+   31  poweroff
+   32  echo "Tes File Sharing" > root/share/tes.txt
+   33  cd /root/share/
+   34  s
+   35  ls
+   36  touch tes.txt
+   37  nano tes.txt
+   38  docker -ti -v /root/share:/idn ubuntu
+   39  docker run -ti -v /root/share:/idn ubuntu
+   40  man touch
+   41  docker run -ti --volumed-from
+   42  docker ps
+   43  docker run -ti --volumed-from cdc7598069c4 --name baru_sharing ubuntu
+   44  docker run -ti --volumes-from cdc7598069c4 --name baru_sharing ubuntu
+   45  ps -a
+   46  docker ps -a
+   47  docker attach cdc7598069c4
+   48  docker ps -a
+   49  docker --help
+   50  docker ps -a
+   51  docker stop 813c48d9484f
+   52  docker ps -a
+   53  docker attach 0e57fd44a97f
+   54  docker ps -a
+   55  ifconfig
+   56  ping 172.17.0.1
+   57  docker network list
+   58  docker network create --help
+   59  docker network create --driver bridge --subnet 10.0.0.0/28 network-A
+   60  docker network list
+   61  docker run --name tes-net-A --network network-A -ti ubuntu
+   62  docker ps -a
+   63  docker --help
+   64  docker inspect 746a474e7bc8
+   65  docker stats
+   66  docker inspect 746a474e7bc8
+   67  docker stats
+   68  cd ~
+   69  docker run -ti -d --restart=always --name shipyard-rethinkdb rethinkdb
+   70  iptables -t nat -L
+   71  docker run -t -i -p 1414:80 ubuntu:14.04
+   72  ping google.com
+   73  docker run -t -i -p 1414:80 ubuntu:14.04
+   74  ip a
+   75  docker ps -a
+   76  docker attach 3ef95c3812a4
+   77  ip a
+   78  shutdown -h 0
+   79  history

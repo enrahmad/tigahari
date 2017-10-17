@@ -1,0 +1,27 @@
+DOKUMENTASI XTIME
+
+1. Membuat xtime menggunakan CodeIgniter
+2. Membuat database xtime
+3. Memasang xtime di server
+
+Pada awalnya kami melakukan pengembangan di Windows 7, dengan menggunakan xampp. Download CodeIgniter kemudian ekstrak di /xampp/htdocs/xtime/
+Kemudian buka localhost/xtime maka akan muncul xxxxx
+Hal pertama yang dilakukan adalah setting route dan database
+2. Membuat database
+Kami menggunakan SQLite dalam mengembangkan xtime.
+Buat database xtime dengan user dan password tertentu, tidak harus root.
+Berikut adalah desain database kami.
+xxxxx
+ 
+
+
+
+$config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
+$config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
+$config['base_url'] .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+
+
+Penafsiran dari kode-kode diatas menurut penulis sebagai berikut:
+1. Pada kode pertama akan ditanya apakah protokolnya menggunakan http atau https? Jika https maka gunakan https, jika tidak maka gunakan http.
+2. Pada kode kedua, hasil dari kode pertama akan ditempelkan dengan jenis host nya seperti https://http_host atau http://http_host. Http_host itu mirip localhost atau host server seperti Apache, Nginx atau LiteSpeed.
+3. Pada kode ketiga, hasil dari kode pertama dan kedua akan ditempel pada kode ketiga. Seperti https://http_host/script_name atau http://http_host/script_name.
